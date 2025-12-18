@@ -1,3 +1,6 @@
+# Written by Ali Tobah based on code by
+# Dr. Abel Sanchez at https://github.com/abelsan/bot
+
 import requests
 import discord
 import os

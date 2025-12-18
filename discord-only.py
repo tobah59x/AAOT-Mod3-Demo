@@ -1,3 +1,5 @@
+# Written by Dr. Abel Sanchez at https://github.com/abelsan/bot
+
 from dotenv import load_dotenv
 import discord
 import os

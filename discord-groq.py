@@ -1,3 +1,6 @@
+# Written by Ali Tobah based on code by
+# Dr. Abel Sanchez at https://github.com/abelsan/bot
+
 from dotenv import load_dotenv
 from groq import Groq
 import discord
