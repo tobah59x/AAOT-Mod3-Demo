@@ -1,5 +1,7 @@
 # Written by Ali Tobah based on code by
 # Dr. Abel Sanchez at https://github.com/abelsan/bot
+# NOTE: THIS VERSION HAS NOT BEEN TESTED
+#       AND MAY NOT WORK!
 
 import requests
 import discord
