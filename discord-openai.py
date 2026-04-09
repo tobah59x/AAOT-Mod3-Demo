@@ -1,4 +1,4 @@
-# This code was kindly provided by https://github.com/avathuy/dbot
+# This code was kindly provided by Thuy Pham - https://github.com/avathuy/dbot
 
 from dotenv import load_dotenv
 from openai import OpenAI
