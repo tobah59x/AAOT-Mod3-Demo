@@ -8,7 +8,7 @@ import os
 
 # Load environment variables
 load_dotenv()
-GROQ_API_KEY = os.getenv("GROQ_API_KEY")
+GROQ_API_KEY = os.getenv("GROQ_KEY")
 DISCORD_TOKEN = os.getenv("TOKEN")
 
 # Initialize Groq client
@@ -17,13 +17,14 @@ groq_client = Groq(api_key=GROQ_API_KEY)
 
 def call_groq(question):
     completion = groq_client.chat.completions.create(
-        model="llama-3.3-70b-versatile",
+        model="openai/gpt-oss-120b",
         messages=[
             {
                 "role": "user",
                 "content": f"Respond like a university professor to the following question: {question}"
             }
-        ]
+        ],
+        max_tokens=1500  # maximum number of output tokens
     )
 
     response = completion.choices[0].message.content
@@ -59,7 +60,7 @@ async def on_message(message):
         response = call_groq(message_content)
         print("---")
 
-        await message.channel.send(response)
-
+        for i in range(0, len(response), 2000):
+            await message.channel.send(response[i:i + 2000])
 
 client.run(DISCORD_TOKEN)
